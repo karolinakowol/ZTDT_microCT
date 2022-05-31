@@ -25,11 +25,11 @@ plt.show()
 output_120 = numpy.empty(numpy_image_120.shape,dtype = int)
 output_80 = numpy.empty(numpy_image_80.shape,dtype = int)
 
-water_120 = 22800
+water_120 = 22200
 air_120 = 8400
 
-water_80 = 12750
-air_80 = 7270
+water_80 = 12660
+air_80 = 7720
 
 
 for i in range(numpy_image_120.shape[0]):
@@ -44,7 +44,7 @@ plt.show()
 
 for i in range(numpy_image_80.shape[0]):
     for j in range(numpy_image_80.shape[1]):
-        output_80[i,j] = calculate_Hounsfield_Units(numpy_image_120[i,j],water_120,air_120)
+        output_80[i,j] = calculate_Hounsfield_Units(numpy_image_80[i,j],water_80,air_80)
 
 print(output_120)
 plt.imshow(output_80, cmap ='gray')
